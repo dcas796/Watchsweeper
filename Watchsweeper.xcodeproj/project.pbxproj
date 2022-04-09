@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		657CE3F9280196AE00702925 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CE3F8280196AE00702925 /* GameSettings.swift */; };
+		657CE3FB280196C100702925 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CE3FA280196C100702925 /* Game.swift */; };
+		657CE3FE2801982F00702925 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CE3FD2801982F00702925 /* Cell.swift */; };
+		657CE400280198F300702925 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CE3FF280198F300702925 /* CellView.swift */; };
+		657CE40228019E7200702925 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657CE40128019E7200702925 /* BoardView.swift */; };
 		65F159AD28009112001D4723 /* Watchsweeper WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 65F159AC28009112001D4723 /* Watchsweeper WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		65F159B22800912C001D4723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F159B12800912C001D4723 /* Assets.xcassets */; };
 		65F159B82800912E001D4723 /* Watchsweeper WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 65F159B72800912E001D4723 /* Watchsweeper WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -60,6 +65,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		657CE3F8280196AE00702925 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
+		657CE3FA280196C100702925 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		657CE3FD2801982F00702925 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		657CE3FF280198F300702925 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		657CE40128019E7200702925 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		65F159A828009110001D4723 /* Watchsweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watchsweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F159AC28009112001D4723 /* Watchsweeper WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watchsweeper WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65F159B12800912C001D4723 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +93,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		657CE3FC2801981500702925 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				657CE3F8280196AE00702925 /* GameSettings.swift */,
+				657CE3FA280196C100702925 /* Game.swift */,
+				657CE3FD2801982F00702925 /* Cell.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		65F159A12800910F001D4723 = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +133,9 @@
 		65F159BB2800912E001D4723 /* Watchsweeper WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				65F159BC2800912E001D4723 /* ContentView.swift */,
+				65F159D528009338001D4723 /* Views */,
 				65F159BE2800912E001D4723 /* WatchsweeperApp.swift */,
+				657CE3FC2801981500702925 /* Helpers */,
 				65F159C02800912E001D4723 /* ComplicationController.swift */,
 				65F159C228009132001D4723 /* Assets.xcassets */,
 				65F159C728009132001D4723 /* Info.plist */,
@@ -129,6 +150,16 @@
 				65F159C528009132001D4723 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		65F159D528009338001D4723 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65F159BC2800912E001D4723 /* ContentView.swift */,
+				657CE40128019E7200702925 /* BoardView.swift */,
+				657CE3FF280198F300702925 /* CellView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +291,12 @@
 			files = (
 				65F159BD2800912E001D4723 /* ContentView.swift in Sources */,
 				65F159BF2800912E001D4723 /* WatchsweeperApp.swift in Sources */,
+				657CE3FB280196C100702925 /* Game.swift in Sources */,
+				657CE3F9280196AE00702925 /* GameSettings.swift in Sources */,
+				657CE3FE2801982F00702925 /* Cell.swift in Sources */,
+				657CE40228019E7200702925 /* BoardView.swift in Sources */,
 				65F159C12800912E001D4723 /* ComplicationController.swift in Sources */,
+				657CE400280198F300702925 /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
