@@ -23,6 +23,9 @@ class Game: ObservableObject {
     /// A boolean value that indicates whether the player has won or not
     @Published var isWon: Bool = false
     
+    /// The number of bombs correctly flagged
+    @Published var score: Int = 0
+    
     /// Create a new Game instance with the specified game settings
     init(from settings: GameSettings) {
         self.settings = settings
@@ -90,6 +93,10 @@ class Game: ObservableObject {
 
         cell.isFlagged.toggle()
         
+        if cell.status == .bomb {
+            score += cell.isFlagged ? 1 : -1
+        }
+        
         if hasPlayerWon() {
             showResult = true
             isWon = true
@@ -100,6 +107,7 @@ class Game: ObservableObject {
     
     /// Reset the game board and generate a new one
     func reset() {
+        score = 0
         board = Self.generateGameBoard(from: settings)
         showResult = false
         isWon = false

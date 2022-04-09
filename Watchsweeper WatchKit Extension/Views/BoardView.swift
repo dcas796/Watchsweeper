@@ -26,7 +26,7 @@ struct BoardView: View {
         }
         .alert(isPresented: $game.showResult) {
             Alert(title: Text(game.isWon ? "You have won" : "You have lost"),
-                  message: Text(game.isWon ? "You flagged all bombs" : "Better luck next time"),
+                  message: Text("Score: \(game.score)\n" + (game.isWon ? "You flagged all bombs" : "Better luck next time")),
                   primaryButton: .destructive(Text("Reset")) {
                       game.reset()
                   },
